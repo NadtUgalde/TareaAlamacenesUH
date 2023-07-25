@@ -69,10 +69,15 @@
   <ItemGroup>
     <Content Include="Css\CssBotones.css" />
     <Content Include="Css\EstiloCatalogo.css" />
+    <Content Include="Css\Login.css" />
     <Content Include="FrmClientes.aspx" />
     <Content Include="FrmDetallesOrdenes.aspx" />
     <Content Include="FrmOrdenes.aspx" />
     <Content Include="FrmProductos.aspx" />
+    <Content Include="Imagenes\arriba.png" />
+    <Content Include="Imagenes\coffee-laptop-notes-5k-uhd-wallpaper-preview.jpg" />
+    <Content Include="Imagenes\pexels-atbo-245241.jpg" />
+    <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -106,6 +111,13 @@
     </Compile>
     <Compile Include="FrmProductos.aspx.designer.cs">
       <DependentUpon>FrmProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>

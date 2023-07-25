@@ -43,7 +43,7 @@ namespace AlamacenesUH.Clases
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@Id", 0));
+                    cmd.Parameters.Add(new SqlParameter("@id_cliente", 0 ));
                     cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
                     cmd.Parameters.Add(new SqlParameter("@Direccion", direccion));
                     cmd.Parameters.Add(new SqlParameter("@Telefono", telefono));
@@ -78,7 +78,7 @@ namespace AlamacenesUH.Clases
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@ID", codigo));
+                    cmd.Parameters.Add(new SqlParameter("@id_cliente", codigo));
 
 
                     retorno = cmd.ExecuteNonQuery();
@@ -142,7 +142,7 @@ namespace AlamacenesUH.Clases
             return clientes;
         }
 
-        public static int ModificarClientes(string nombre, string direccion, string telefono)
+        public static int ModificarClientes(string codigo, string nombre, string direccion, string telefono)
         {
             int retorno = 0;
             tipoOperacion = 3;
@@ -157,7 +157,7 @@ namespace AlamacenesUH.Clases
                     };
 
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@Id", 0));
+                    cmd.Parameters.Add(new SqlParameter("@id_cliente", codigo ));
                     cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
                     cmd.Parameters.Add(new SqlParameter("@Direccion", direccion));
                     cmd.Parameters.Add(new SqlParameter("@Telefono", telefono));

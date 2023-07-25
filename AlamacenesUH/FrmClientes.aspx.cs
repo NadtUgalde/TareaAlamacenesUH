@@ -92,5 +92,10 @@ namespace AlamacenesUH
         {
 
         }
+
+        protected void tnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
