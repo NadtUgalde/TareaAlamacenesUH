@@ -32,7 +32,7 @@ namespace AlmacenesUH
             repeaterdetalles.DataBind();
         }
 
-        private void CargarOrdenes()
+        private void CargarDetalles()
         {
             LimpiarTabla();
             detalles = ClsDetalle.ObtenerDetalles();
@@ -63,7 +63,7 @@ namespace AlmacenesUH
         }
         protected void BAgregar_Click(object sender, EventArgs e)
         {
-            int resultado = ClsDetalle.AgregarDestalles(tdetalle.Text, torden.Text, tproducto.Text, tcantidad.Text);
+            int resultado = ClsDetalle.AgregarDetalles(tdetalle.Text, torden.Text, tproducto.Text, tcantidad.Text);
 
             if (resultado > 0)
             {

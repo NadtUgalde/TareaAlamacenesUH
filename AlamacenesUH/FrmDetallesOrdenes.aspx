@@ -21,12 +21,12 @@
     <form cssclass="contenedor" id="form1" runat="server">
         <div>
             <div>
-                <label for="Detalle">Detella:</label>
+                <label for="Detalle">Detalla:</label>
                 <asp:TextBox ID="tdetalle" runat="server" requiered></asp:TextBox>
             </div>
             <div>
                 <label for="orden">Orden:</label>
-                <asp:TextBox ID="torden" runat="server" OnTextChanged="tnombre_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="torden" runat="server" ></asp:TextBox>
             </div>
             <div>
                 <label for="Producto">Producto:</label>

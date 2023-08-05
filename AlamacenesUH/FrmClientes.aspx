@@ -77,8 +77,7 @@
             </table>
         </div>
         </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde- Todos los derechos 2023
+        <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva- Todos los derechos 2023
         <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-        
     </body>
 </html>

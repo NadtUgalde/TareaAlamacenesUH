@@ -13,9 +13,10 @@ namespace AlmacenesUH.Clases
         public int orden { get; set; }
         public int producto { get; set; }
         public int cantidad { get; set; }
+
         private static int tipoOperacion = 0;
 
-        public static List<ClsDetalle> ordenes = new List<ClsDetalle>();
+        public static List<ClsDetalle> detalles = new List<ClsDetalle>();
         public ClsDetalle(int id, int orden, int producto, int cantidad)
         {
             this.id = id;
@@ -29,7 +30,7 @@ namespace AlmacenesUH.Clases
 
         }
 
-        public static int AgregarOrdenes(string cliente, string fecha, string total)
+        public static int AgregarDetalles(string id, string orden, string producto, string cantidad)
         {
             int retorno = 0;
             tipoOperacion = 1;
@@ -38,15 +39,15 @@ namespace AlmacenesUH.Clases
             {
                 using (Conn = Clases.DBconn.obtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand("Sp_GestionarOrdenes", Conn)
+                    SqlCommand cmd = new SqlCommand("sp_GestionarDetallesOrdenes", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@id_orden", 0));
-                    cmd.Parameters.Add(new SqlParameter("@id_cliente", cliente));
-                    cmd.Parameters.Add(new SqlParameter("@fecha", fecha));
-                    cmd.Parameters.Add(new SqlParameter("@total", total));
+                    cmd.Parameters.Add(new SqlParameter("@id_detalle", id));
+                    cmd.Parameters.Add(new SqlParameter("@id_orden", orden));
+                    cmd.Parameters.Add(new SqlParameter("@id_producto", producto));
+                    cmd.Parameters.Add(new SqlParameter("@cantidad", cantidad));
 
                     retorno = cmd.ExecuteNonQuery();
                 }
@@ -64,7 +65,7 @@ namespace AlmacenesUH.Clases
         }
 
 
-        public static int BorrarOrdenes(string id)
+        public static int BorrarDetalles(string id)
         {
             int retorno = 0;
             tipoOperacion = 2;
@@ -73,12 +74,12 @@ namespace AlmacenesUH.Clases
             {
                 using (Conn = Clases.DBconn.obtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand("Sp_GestionarOrdenes", Conn)
+                    SqlCommand cmd = new SqlCommand("sp_GestionarDetallesOrdenes", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@id_orden", id));
+                    cmd.Parameters.Add(new SqlParameter("@id_detalle", id));
 
 
                     retorno = cmd.ExecuteNonQuery();
@@ -97,7 +98,7 @@ namespace AlmacenesUH.Clases
         }
 
 
-        public static List<ClsOrden> ObtenerOrdenes()
+        public static List<ClsDetalle> ObtenerDetalles()
         {
             int retorno = 0;
             tipoOperacion = 4;
@@ -108,7 +109,7 @@ namespace AlmacenesUH.Clases
 
                 using (Conn = Clases.DBconn.obtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand("Sp_GestionarOrdenes", Conn)
+                    SqlCommand cmd = new SqlCommand("sp_GestionarDetallesOrdenes", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
@@ -118,12 +119,12 @@ namespace AlmacenesUH.Clases
                     {
                         while (reader.Read())
                         {
-                            ClsOrden orden = new ClsOrden();
-                            orden.id = reader.GetInt32(0);
-                            orden.cliente = reader.GetInt32(1);
-                            orden.fecha = reader.GetDateTime(2);
-                            orden.total = reader.GetDecimal(3);
-                            ordenes.Add(orden);
+                            ClsDetalle detalle = new ClsDetalle();
+                            detalle.id = reader.GetInt32(0);
+                            detalle.orden = reader.GetInt32(1);
+                            detalle.producto = reader.GetInt32(2);
+                            detalle.cantidad = reader.GetInt32(3);
+                            detalles.Add(detalle);
                         }
 
                     }
@@ -131,7 +132,7 @@ namespace AlmacenesUH.Clases
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
-                return ordenes;
+                return detalles;
             }
             finally
             {
@@ -139,10 +140,10 @@ namespace AlmacenesUH.Clases
                 Conn.Dispose();
             }
 
-            return ordenes;
+            return detalles;
         }
 
-        public static int ModificarOrdenes(string id, string cliente, string fecha, string total)
+        public static int ModificarDetalles(string id, string orden, string producto, string cantidad)
         {
             int retorno = 0;
             tipoOperacion = 3;
@@ -151,15 +152,15 @@ namespace AlmacenesUH.Clases
             {
                 using (Conn = Clases.DBconn.obtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand("Sp_GestionarOrdenes", Conn)
+                    SqlCommand cmd = new SqlCommand("sp_GestionarDetallesOrdenes", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@id_orden", id));
-                    cmd.Parameters.Add(new SqlParameter("@id_cliente", cliente));
-                    cmd.Parameters.Add(new SqlParameter("@fecha", fecha));
-                    cmd.Parameters.Add(new SqlParameter("@total", total));
+                    cmd.Parameters.Add(new SqlParameter("@id_detalle", id));
+                    cmd.Parameters.Add(new SqlParameter("@id_orden", orden));
+                    cmd.Parameters.Add(new SqlParameter("@id_producto", producto));
+                    cmd.Parameters.Add(new SqlParameter("@cantidad", cantidad));
 
                     retorno = cmd.ExecuteNonQuery();
                 }
