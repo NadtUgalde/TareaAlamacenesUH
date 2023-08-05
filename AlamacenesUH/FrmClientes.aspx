@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmClientes.aspx.cs" Inherits="AlamacenesUH.FrmClientes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmClientes.aspx.cs" Inherits="AlmacenesUH.FrmClientes" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
     <link href="Css/CssBotones.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Clientes</title>
     <style type="text/css">
         .auto-style1 {
             width: 400px;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Runtime.CompilerServices;
 
-namespace AlamacenesUH.Clases
+namespace AlmacenesUH.Clases
 {
     public class ClsCliente
     {
@@ -64,7 +64,7 @@ namespace AlamacenesUH.Clases
         }
 
 
-        public static int BorrarClientes(string codigo)
+        public static int BorrarClientes(string id)
         {
             int retorno = 0;
             tipoOperacion = 2;
@@ -78,7 +78,7 @@ namespace AlamacenesUH.Clases
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@id_cliente", codigo));
+                    cmd.Parameters.Add(new SqlParameter("@id_cliente", id));
 
 
                     retorno = cmd.ExecuteNonQuery();
@@ -142,7 +142,7 @@ namespace AlamacenesUH.Clases
             return clientes;
         }
 
-        public static int ModificarClientes(string codigo, string nombre, string direccion, string telefono)
+        public static int ModificarClientes(string id, string nombre, string direccion, string telefono)
         {
             int retorno = 0;
             tipoOperacion = 3;
@@ -155,9 +155,8 @@ namespace AlamacenesUH.Clases
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-
                     cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@id_cliente", codigo ));
+                    cmd.Parameters.Add(new SqlParameter("@id_cliente", id ));
                     cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
                     cmd.Parameters.Add(new SqlParameter("@Direccion", direccion));
                     cmd.Parameters.Add(new SqlParameter("@Telefono", telefono));
@@ -176,6 +175,10 @@ namespace AlamacenesUH.Clases
 
             return retorno;
         }
+
+
+
+
 
 
     }

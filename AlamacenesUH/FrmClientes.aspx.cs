@@ -1,4 +1,4 @@
-﻿using AlamacenesUH.Clases;
+﻿using AlmacenesUH.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlamacenesUH
+namespace AlmacenesUH
 {
     public partial class FrmClientes : System.Web.UI.Page
     {
@@ -25,9 +25,17 @@ namespace AlamacenesUH
 
         }
 
+        private void LimpiarTabla()
+        {
+            clientes.Clear();
+            repeaterClientes.DataSource = null;
+            repeaterClientes.DataBind();
+        }
+
         private void CargarClientes()
         {
-
+            LimpiarTabla();
+            clientes = ClsCliente.ObtenerClientes();
             repeaterClientes.DataSource = clientes;
             repeaterClientes.DataBind();
         }
@@ -90,7 +98,22 @@ namespace AlamacenesUH
 
         protected void BModificar_Click(object sender, EventArgs e)
         {
+            String codigo = tcodigo.Text;
+            String nombre = tnombre.Text;
+            String direccion = tdireccion.Text;
+            String telefono = ttelefono.Text;
+            int resultado = ClsCliente.ModificarClientes(codigo,nombre, direccion,telefono);
 
+            if (resultado > 0)
+            {
+                alertas("Usuario ha sido modificado con exito");
+                LimpiarCampos();
+                CargarClientes();
+            }
+            else
+            {
+                alertas("Error al ingresar Usuario");
+            }
         }
 
         protected void tnombre_TextChanged(object sender, EventArgs e)
