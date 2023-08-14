@@ -16,6 +16,9 @@
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
+        .auto-style2 {
+            width: 400px;
+        }
     </style>
 </head>
 <body>
@@ -44,13 +47,11 @@
                 <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" />
                 <asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" />
             </div>
-
-
         </div>
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Clientes</h2>
-            <table id="clientListTable">
+            <table id="clientListTable" align="center" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
                 <thead cssclass="table">
                     <tr>
                         <th class="auto-style1">Codigo</th>

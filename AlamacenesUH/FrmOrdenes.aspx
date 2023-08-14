@@ -10,10 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ordenes</title>
     <style type="text/css">
-        .auto-style1 {
+        .auto-style2 {
             width: 400px;
             padding: 8px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
     </style>
@@ -47,13 +47,13 @@
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Ordenes</h2>
-            <table id="ordenesListTable">
+            <table id="ordenesListTable" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
                 <thead cssclass="table">
                     <tr>
-                        <th class="auto-style1">Id Ordenes</th>
-                        <th class="auto-style1">Id Clientes</th>
-                        <th class="auto-style1">Fecha</th>
-                        <th class="auto-style1">Total</th>
+                        <th class="auto-style2">Id Ordenes</th>
+                        <th class="auto-style2">Id Clientes</th>
+                        <th class="auto-style2">Fecha</th>
+                        <th class="auto-style2">Total</th>
                     </tr>
                     <asp:Repeater runat="server" ID="repeaterordenes">
                         <ItemTemplate>

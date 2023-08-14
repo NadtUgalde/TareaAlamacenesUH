@@ -10,10 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Productos</title>
     <style type="text/css">
-        .auto-style1 {
+        .auto-style2 {
             width: 400px;
             padding: 8px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
     </style>
@@ -43,12 +43,12 @@
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Productos</h2>
-            <table id="productosListTable">
+            <table id="productosListTable" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
                 <thead cssclass="table">
                     <tr>
-                        <th class="auto-style1">Id Producto</th>
-                        <th class="auto-style1">Nombre</th>
-                        <th class="auto-style1">Precio</th>
+                        <th class="auto-style2">Id Producto</th>
+                        <th class="auto-style2">Nombre</th>
+                        <th class="auto-style2">Precio</th>
                     </tr>
                     <asp:Repeater runat="server" ID="repeaterproductos">
                         <ItemTemplate>

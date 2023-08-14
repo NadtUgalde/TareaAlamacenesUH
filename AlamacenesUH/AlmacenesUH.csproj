@@ -80,12 +80,9 @@
     <Content Include="Imagenes\alto-angulo-escritorio-laptop-espacio-copia.jpg" />
     <Content Include="Imagenes\arriba.png" />
     <Content Include="Imagenes\bg.jpeg" />
-    <Content Include="Imagenes\composicion-portatil-brujula-ingenieria.jpg" />
     <Content Include="Imagenes\FondoLogin.jpg" />
     <Content Include="Imagenes\favicon.ico" />
     <Content Include="Imagenes\FondoMenu.jpg" />
-    <Content Include="Imagenes\gente-negocios-reunion.jpg" />
-    <Content Include="Imagenes\productos-cyber-monday-copy-space.jpg" />
     <Content Include="Imagenes\UH.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
