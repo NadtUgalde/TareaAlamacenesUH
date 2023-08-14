@@ -19,7 +19,7 @@
         <asp:TextBox ID="tusuario" class="login-box" placeholder="Ingrese su nombre de usuario" runat="server" CssClass="auto-style1"/>
         <!-- CONTRASEÑA INPUT -->
         <label for="password">CONTRASEÑA</label>
-        <asp:TextBox ID="tclave" class="login-box" placeholder="Ingrese su contraseña" runat="server" CssClass="auto-style1"/>        
+        <asp:TextBox ID="tclave" class="login-box" textmode ="Password" placeholder="Ingrese su contraseña" runat="server" CssClass="auto-style1"/>        
         <asp:Button ID="bingresar" Class ="login-box" runat="server" Text="Iniciar sesion" cssClass="auto-style1" OnClick="bingresar_Click" />
         <a href="#">¿No te acuerdas de tu contraseña?</a><br/>
         <a href="cuentaNueva.aspx">Crear cuenta nueva</a>

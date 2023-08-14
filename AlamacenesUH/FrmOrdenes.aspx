@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico"/>
     <link href="Css/CssBotones.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ordenes</title>
@@ -22,11 +23,11 @@
         <div>
             <div>
                 <label for="Orden">Orden:</label>
-                <asp:TextBox ID="torden" runat="server" ></asp:TextBox>
+                <asp:TextBox ID="torden" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Cliente">ID Cliente:</label>
-                <asp:TextBox ID="tcliente" runat="server" requiered ></asp:TextBox>
+                <asp:TextBox ID="tcliente" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Fecha">Fecha:</label>
@@ -36,20 +37,18 @@
                 <label for="Total">Total:</label>
                 <asp:TextBox ID="ttotal" runat="server"></asp:TextBox>
             </div>
-
-
-            <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" Width="120px" />
-            <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" Width="120px" />
-            <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" Width="133px" />
-            <%--<asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" Width="134px" />--%>
-
-
+            <div class="button-container">
+                <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" />
+                <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" />
+                <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" />
+                <asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" />
+            </div>
         </div>
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Ordenes</h2>
-            <table  id="ordenesListTable">
-                <thead cssclass ="table" >
+            <table id="ordenesListTable">
+                <thead cssclass="table">
                     <tr>
                         <th class="auto-style1">Id Ordenes</th>
                         <th class="auto-style1">Id Clientes</th>
@@ -69,9 +68,6 @@
                 </thead>
             </table>
         </div>
-        </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva- Todos los derechos 2023
-        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-        
-    </body>
+    </form>
+</body>
 </html>

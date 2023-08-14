@@ -1,4 +1,44 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+﻿@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+* {
+    font-family: Georgia;
+}
+body {
+    background-image: url('../Imagenes/FondoMenu.jpg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
 
 * {
     margin: 0;
@@ -7,10 +47,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #272727;
-    font-family: "Montserrat", sans-serif;
-}
 
 .navMenu {
     position: absolute;
@@ -33,13 +69,13 @@ body {
     }
 
         .navMenu a:hover {
-            color: #fddb3a;
+            color: #ffd800;
         }
 
     .navMenu .dot {
         width: 6px;
         height: 6px;
-        background: #fddb3a;
+        background: #ffd800;
         border-radius: 50%;
         opacity: 0;
         -webkit-transform: translateX(30px);
@@ -49,32 +85,32 @@ body {
     }
 
     .navMenu a:nth-child(1):hover ~ .dot {
-        -webkit-transform: translateX(40px);
-        transform: translateX(40px);
+        -webkit-transform: translateX(38px);
+        transform: translateX(38px);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
 
     .navMenu a:nth-child(2):hover ~ .dot {
-        -webkit-transform: translateX(180px);
-        transform: translateX(180px);
+        -webkit-transform: translateX(175px);
+        transform: translateX(175px);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
 
     .navMenu a:nth-child(3):hover ~ .dot {
-        -webkit-transform: translateX(330px);
-        transform: translateX(330px);
+        -webkit-transform: translateX(323px);
+        transform: translateX(323px);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
 
     .navMenu a:nth-child(4):hover ~ .dot {
-        -webkit-transform: translateX(460px);
-        transform: translateX(460px);
+        -webkit-transform: translateX(457px);
+        transform: translateX(457px);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         opacity: 1;

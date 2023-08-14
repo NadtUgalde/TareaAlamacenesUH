@@ -21,12 +21,12 @@
     <form cssclass="contenedor" id="form1" runat="server">
         <div>
             <div>
-                <label for="Detalle">Detalla:</label>
-                <asp:TextBox ID="tdetalle" runat="server" requiered></asp:TextBox>
+                <label for="Detalle">Detalle:</label>
+                <asp:TextBox ID="tdetalle" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="orden">Orden:</label>
-                <asp:TextBox ID="torden" runat="server" ></asp:TextBox>
+                <asp:TextBox ID="torden" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Producto">Producto:</label>
@@ -36,20 +36,18 @@
                 <label for="Cantidad">Cantidad:</label>
                 <asp:TextBox ID="tcantidad" runat="server"></asp:TextBox>
             </div>
-
-
-            <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" Width="120px" />
-            <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" Width="120px" />
-            <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" Width="133px" />
-            <%--<asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" Width="134px" />--%>
-
-
+            <div class="button-container">
+                <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" />
+                <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" />
+                <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" />
+                <asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" />
+            </div>
         </div>
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Detalles de Ordenes</h2>
-            <table  id="clientListTable">
-                <thead cssclass ="table" >
+            <table id="clientListTable">
+                <thead cssclass="table">
                     <tr>
                         <th class="auto-style1">Detalle</th>
                         <th class="auto-style1">Orden</th>
@@ -63,16 +61,11 @@
                                 <td><%# Eval("Orden") %></td>
                                 <td><%# Eval("Producto") %></td>
                                 <td><%# Eval("Cantidad") %></td>
-
-
                         </ItemTemplate>
                     </asp:Repeater>
                 </thead>
             </table>
         </div>
-        </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde- Todos los derechos 2023
-        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-        
-    </body>
+    </form>
+</body>
 </html>

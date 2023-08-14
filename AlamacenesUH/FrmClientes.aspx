@@ -6,13 +6,14 @@
 <head runat="server">
     <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
     <link href="Css/CssBotones.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Clientes</title>
     <style type="text/css">
         .auto-style1 {
             width: 400px;
             padding: 8px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
     </style>
@@ -22,7 +23,7 @@
         <div>
             <div>
                 <label for="Codigo">Codigo:</label>
-                <asp:TextBox ID="tcodigo" runat="server" requiered></asp:TextBox>
+                <asp:TextBox ID="tcodigo" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Nombre">Nombre Cliente:</label>
@@ -37,19 +38,20 @@
                 <asp:TextBox ID="ttelefono" runat="server"></asp:TextBox>
             </div>
 
-
-            <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" Width="120px" />
-            <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" Width="120px" />
-            <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" Width="133px" />
-            <asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" Width="134px" />
+            <div class="button-container">
+                <asp:Button ID="BAgregar" CssClass="button button1" runat="server" Text="Agregar" OnClick="BAgregar_Click" />
+                <asp:Button ID="BBorrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="BBorrar_Click" />
+                <asp:Button ID="BModificar" CssClass="button button1" runat="server" Text="Modificar" OnClick="BModificar_Click" />
+                <asp:Button ID="BConsultar" CssClass="button button1" runat="server" Text="Consultar" />
+            </div>
 
 
         </div>
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Clientes</h2>
-            <table  id="clientListTable">
-                <thead cssclass ="table" >
+            <table id="clientListTable">
+                <thead cssclass="table">
                     <tr>
                         <th class="auto-style1">Codigo</th>
                         <th class="auto-style1">Nombre</th>
@@ -65,7 +67,7 @@
                                 <td><%# Eval("Telefono") %></td>
 
 
-<%--                                 <td>
+                                <%--                                 <td>
                                         
                                         <asp:Button ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" CommandArgument='<%# Eval("Codigo") %>' />
                                         <asp:Button ID="btnBorrar" runat="server" Text="Borrar" OnClick="btnBorrar_Click" CommandArgument='<%# Eval("Codigo") %>' />
@@ -76,8 +78,8 @@
                 </thead>
             </table>
         </div>
-        </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva- Todos los derechos 2023
-        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-    </body>
+    </form>
+    <%-- <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva - Todos los derechos 2023
+        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>--%>
+</body>
 </html>
