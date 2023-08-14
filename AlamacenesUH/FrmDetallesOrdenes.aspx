@@ -66,14 +66,6 @@
                 </thead>
             </table>
         </div>
-<<<<<<< HEAD
-        </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva- Todos los derechos 2023
-        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-    </body>
-</html>
-=======
     </form>
 </body>
 </html>
->>>>>>> 95d7091d58378e2967fe44d4dfb2ed9f7d5be3bf
