@@ -8,9 +8,10 @@ body {
     font-family: Arial, sans-serif;
     padding: 5%;
     width: 700px;
-    background: url('../Imagenes/productos-cyber-monday-copy-space.jpg') no-repeat center center fixed;
+    background: url('../Imagenes/alto-angulo-escritorio-laptop-espacio-copia.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0 auto;
+    color:white;
 }
 
 .container {
@@ -34,6 +35,7 @@ h2 {
     padding: 12px 12px; /* Espacio alrededor del título */
     border-radius: 8px; /* Agregar esquinas redondeadas */
     margin-bottom: 7px; /* Añadir margen inferior para separación */
+    color: black;
 }
 
 form {

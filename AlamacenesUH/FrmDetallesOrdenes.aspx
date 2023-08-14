@@ -9,10 +9,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Lista de Detalles de Ordenes</title>
     <style type="text/css">
-        .auto-style1 {
+        .auto-style3 {
             width: 400px;
             padding: 8px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
     </style>
@@ -46,13 +46,13 @@
 
         <div cssclass="rigth">
             <h2 align="center">Lista de Detalles de Ordenes</h2>
-            <table id="clientListTable">
+            <table id="clientListTable" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
                 <thead cssclass="table">
                     <tr>
-                        <th class="auto-style1">Detalle</th>
-                        <th class="auto-style1">Orden</th>
-                        <th class="auto-style1">Producto</th>
-                        <th class="auto-style1">Cantidad</th>
+                        <th class="auto-style3">Detalle</th>
+                        <th class="auto-style3">Orden</th>
+                        <th class="auto-style3">Producto</th>
+                        <th class="auto-style3">Cantidad</th>
                     </tr>
                     <asp:Repeater runat="server" ID="repeaterdetalles">
                         <ItemTemplate>

@@ -10,7 +10,7 @@
     <title>UH - INICIAR SESION</title>
 </head>
 <body>
-      <div class="login-box">
+      <div class="login-box" dir="ltr" style="border-radius: 10px;">
       <img src="imagenes/UH.jpg" class="avatar" alt="Avatar Image"/>
       <h1>Bienvenido al Almacen UH</h1>
           <form id="form1" runat="server">
