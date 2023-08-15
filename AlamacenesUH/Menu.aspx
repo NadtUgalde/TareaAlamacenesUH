@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico" />
     <link href="Css/menu.css" rel="stylesheet" />
     <title>Menu</title>
 </head>

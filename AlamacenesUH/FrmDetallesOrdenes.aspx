@@ -6,6 +6,7 @@
 <head runat="server">
     <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
     <link href="Css/CssBotones.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Lista de Detalles de Ordenes</title>
     <style type="text/css">
@@ -66,14 +67,6 @@
                 </thead>
             </table>
         </div>
-<<<<<<< HEAD
-        </form>
-        <footer><div class="footer"> Copyright &copy; Valeria Ugalde y Bryan Leiva- Todos los derechos 2023
-        <a class="footerimg" href="#form1"><img src="Imagenes/arriba.png" /></a></div> </footer>
-    </body>
-</html>
-=======
     </form>
 </body>
 </html>
->>>>>>> 95d7091d58378e2967fe44d4dfb2ed9f7d5be3bf
