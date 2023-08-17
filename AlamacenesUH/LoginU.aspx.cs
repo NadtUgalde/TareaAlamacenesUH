@@ -6,13 +6,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlmacenesUH
+namespace AlamacenesUH
 {
-    public partial class Login1: System.Web.UI.Page
+    public partial class LoginU : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         public void alertas(string texto) //Metodo script que crea una alerta en caso de que el usuario digite datos incorrectos.
         {

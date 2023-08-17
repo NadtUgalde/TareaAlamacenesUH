@@ -6,9 +6,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlmacenesUH
+namespace AlamacenesUH
 {
-    public partial class FrmDetallesOrdenes : System.Web.UI.Page
+    public partial class FrmDetallesOrdene : System.Web.UI.Page
     {
         List<ClsDetalle> detalles = ClsDetalle.ObtenerDetalles();
         protected void Page_Load(object sender, EventArgs e)
@@ -18,13 +18,10 @@ namespace AlmacenesUH
                 CargarDetalles();
             }
             else
-            {
+             {
 
             }
-
-
         }
-
         private void LimpiarTabla()
         {
             detalles.Clear();
@@ -96,7 +93,6 @@ namespace AlmacenesUH
                 alertas("Error al ingresar detalle");
             }
         }
-
         protected void BModificar_Click(object sender, EventArgs e)
         {
             String detalle = tdetalle.Text;
@@ -116,6 +112,5 @@ namespace AlmacenesUH
                 alertas("Error al ingresar detalle");
             }
         }
-
     }
 }

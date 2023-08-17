@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlmacenesUH
+namespace AlamacenesUH
 {
     public partial class FrmProductos : System.Web.UI.Page
     {
@@ -21,8 +21,6 @@ namespace AlmacenesUH
             {
 
             }
-
-
         }
 
         private void LimpiarTabla()
@@ -114,6 +112,5 @@ namespace AlmacenesUH
                 alertas("Error al ingresar producto");
             }
         }
-
     }
 }

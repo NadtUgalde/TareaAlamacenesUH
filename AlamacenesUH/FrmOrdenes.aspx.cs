@@ -6,11 +6,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlmacenesUH
+namespace AlamacenesUH
 {
-    public partial class FrmOrdenes : System.Web.UI.Page
+    public partial class FrmOrdene : System.Web.UI.Page
     {
-     
         List<ClsOrden> ordenes = ClsOrden.ObtenerOrdenes();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -57,7 +56,7 @@ namespace AlmacenesUH
 
         public void LimpiarCampos()
         {
-            
+
             tfecha.Text = string.Empty;
             ttotal.Text = string.Empty;
         }
@@ -116,7 +115,5 @@ namespace AlmacenesUH
                 alertas("Error al ingresar Orden");
             }
         }
-        
-
     }
 }

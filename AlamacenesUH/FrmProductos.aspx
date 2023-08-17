@@ -1,33 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmProductos.aspx.cs" Inherits="AlmacenesUH.FrmProductos" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
-    <link href="Css/CssBotones.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Productos</title>
-    <style type="text/css">
-        .auto-style2 {
-            width: 400px;
-            padding: 8px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <form cssclass="contenedor" id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/menuMaster.master" AutoEventWireup="true" CodeBehind="FrmProductos.aspx.cs" Inherits="AlamacenesUH.FrmProductos" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
             <div>
                 <label for="Producto">Producto:</label>
                 <asp:TextBox ID="tproducto" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Nombre">Nombre:</label>
-                <asp:TextBox ID="tnombre" runat="server" ></asp:TextBox>
+                <asp:TextBox ID="tnombre" runat="server"></asp:TextBox>
             </div>
             <div>
                 <label for="Precio">Precio:</label>
@@ -62,6 +44,7 @@
                 </thead>
             </table>
         </div>
-    </form>
-</body>
-</html>
+        <div class="footer">
+            Copyright &copy; Valeria Ugalde y Bryan Leiva - Todos los derechos 2023
+        </div>
+</asp:Content>

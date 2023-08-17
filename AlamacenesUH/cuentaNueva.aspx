@@ -24,7 +24,7 @@
         <label for="password">CONTRASEÑA</label>
         <input type="password" placeholder="Ingrese su contraseña"/>
         <input type="submit" value="Crear cuenta nueva"/>
-        <a href="Login.aspx">Regresar a la pestaña anterior</a>
+        <a href="LoginU.aspx">Regresar a la pestaña anterior</a>
       </form>
     </div>
 </body>

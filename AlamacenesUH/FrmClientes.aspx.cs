@@ -6,11 +6,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AlmacenesUH
+namespace AlamacenesUH
 {
-    public partial class FrmClientes : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         List<ClsCliente> clientes = ClsCliente.ObtenerClientes();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,10 +22,7 @@ namespace AlmacenesUH
             {
 
             }
-
-
         }
-
         private void LimpiarTabla()
         {
             clientes.Clear();
@@ -75,7 +73,7 @@ namespace AlmacenesUH
                 alertas("Error al ingresar Usuario");
             }
 
-           
+
         }
 
         protected void BBorrar_Click(object sender, EventArgs e)
@@ -102,7 +100,7 @@ namespace AlmacenesUH
             String nombre = tnombre.Text;
             String direccion = tdireccion.Text;
             String telefono = ttelefono.Text;
-            int resultado = ClsCliente.ModificarClientes(codigo,nombre, direccion,telefono);
+            int resultado = ClsCliente.ModificarClientes(codigo, nombre, direccion, telefono);
 
             if (resultado > 0)
             {
@@ -115,7 +113,6 @@ namespace AlmacenesUH
                 alertas("Error al ingresar Usuario");
             }
         }
-
         protected void tnombre_TextChanged(object sender, EventArgs e)
         {
 

@@ -1,26 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmDetallesOrdenes.aspx.cs" Inherits="AlmacenesUH.FrmDetallesOrdenes" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
-    <link href="Css/CssBotones.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Lista de Detalles de Ordenes</title>
-    <style type="text/css">
-        .auto-style3 {
-            width: 400px;
-            padding: 8px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <form cssclass="contenedor" id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/menuMaster.master" AutoEventWireup="true" CodeBehind="FrmDetallesOrdenes.aspx.cs" Inherits="AlamacenesUH.FrmDetallesOrdene" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
             <div>
                 <label for="Detalle">Detalle:</label>
                 <asp:TextBox ID="tdetalle" runat="server"></asp:TextBox>
@@ -67,6 +49,5 @@
                 </thead>
             </table>
         </div>
-    </form>
-</body>
-</html>
+        <div class="footer">Copyright &copy; Valeria Ugalde y Bryan Leiva - Todos los derechos 2023</div>
+</asp:Content>

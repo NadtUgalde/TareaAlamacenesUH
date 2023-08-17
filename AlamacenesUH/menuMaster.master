@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="menuMaster.master.cs" Inherits="AlamacenesUH.menuMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
+    <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
+    <link href="Css/CssBotones.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Css/PaginaMaestra.css" />
+    <title>Almacenes UH</title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 400px;
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .auto-style2 {
+            width: 400px;
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .auto-style3 {
+            width: 400px;
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#news">Facturación</a></li>
+                <li><a href="#news">Bitacora</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Catalogo</a>
+                    <div class="dropdown-content">
+                        <a href="FrmClientes.aspx">Clientes</a>
+                        <a href="FrmOrdenes.aspx">Ordenes</a>
+                        <a href="FrmProductos.aspx">Productos</a>
+                        <a href="FrmDetallesOrdenes.aspx">Detalles de ordenes</a>
+                    </div>
+                </li>
+            </ul>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

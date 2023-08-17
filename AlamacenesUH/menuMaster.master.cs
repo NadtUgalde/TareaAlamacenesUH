@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AlamacenesUH
 {
-    public partial class paginaMaestra : System.Web.UI.MasterPage
+    public partial class menuMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
