@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico" />
     <link href="Css/EstiloCatalogo.css" rel="stylesheet" />
     <link href="Css/CssBotones.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Css/PaginaMaestra.css" />
+    <link href="Css/PaginaMaestra.css" rel="stylesheet" />
+    <link href="Css/Info.css" rel="stylesheet" />
     <title>Almacenes UH</title>
     <style type="text/css">
         .auto-style1 {
@@ -37,7 +38,7 @@
     <form id="form1" runat="server">
         <div>
             <ul>
-                <li><a href="Menu.aspx">Inicio</a></li>
+                <li><a href="Informacion.aspx">Información</a></li>
                 <li><a href="#news">Facturación</a></li>
                 <li><a href="#news">Bitacora</a></li>
                 <li class="dropdown">

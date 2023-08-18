@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Css\CssBotones.css" />
     <Content Include="Css\EstiloCatalogo.css" />
+    <Content Include="Css\Info.css" />
     <Content Include="Css\LoginDos.css" />
     <Content Include="Css\LoginU.css" />
     <Content Include="Css\menu.css" />
@@ -80,10 +81,13 @@
     <Content Include="Imagenes\alto-angulo-escritorio-laptop-espacio-copia.jpg" />
     <Content Include="Imagenes\arriba.png" />
     <Content Include="Imagenes\bg.jpeg" />
+    <Content Include="Imagenes\Bryan2.jpg" />
     <Content Include="Imagenes\FondoLogin.jpg" />
     <Content Include="Imagenes\favicon.ico" />
     <Content Include="Imagenes\FondoMenu.jpg" />
     <Content Include="Imagenes\UH.jpg" />
+    <Content Include="Imagenes\Valeria.jpg" />
+    <Content Include="Informacion.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Web.config" />
@@ -124,6 +128,13 @@
       <DependentUpon>FrmProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\ClsUsuario.cs" />
+    <Compile Include="Informacion.aspx.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informacion.aspx.designer.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

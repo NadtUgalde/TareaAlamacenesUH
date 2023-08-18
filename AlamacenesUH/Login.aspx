@@ -10,18 +10,18 @@
     <title>UH - INICIAR SESION</title>
 </head>
 <body>
-    <div class="login-box" style="border-radius: 10px;">
+    <div class="login-box" style="border-radius: 10px; width: 440px; height: 480px;">
         <img src="imagenes/UH.jpg" class="avatar" alt="Avatar Image" />
         <h1>Bienvenido al Almacen UH</h1>
         <form id="form1" runat="server">
             <!-- USUARIO INPUT -->
             <label for="username">USUARIO</label>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000" Font-Size="Small" Font-family="Georgia">Campo requerido</asp:RequiredFieldValidator>
             <asp:TextBox ID="tusuario" class="login-box" placeholder="Ingrese su nombre de usuario" runat="server" CssClass="auto-style1" OnTextChanged="tusuario_TextChanged" />
             <!-- CONTRASEÑA INPUT -->
             <label for="password">CONTRASEÑA</label>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
-            <asp:TextBox ID="tclave" class="login-box" TextMode="Password" placeholder="Ingrese su contraseña" runat="server" CssClass="auto-style1" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000" Font-Size="Small" Font-family="Georgia">Campo requerido</asp:RequiredFieldValidator>
+            <asp:TextBox ID="tclave" class="login-box" TextMode="Password" placeholder="Ingrese su contraseña" runat="server" CssClass="auto-style1" /> 
             <asp:Button ID="bingresar" Class="login-box" runat="server" Text="Iniciar sesion" CssClass="auto-style1" OnClick="bingresar_Click" BorderStyle="None" ToolTip="Cargando..." />
             <a href="#">¿No te acuerdas de tu contraseña?</a><br />
             <a href="cuentaNueva.aspx">Crear cuenta nueva</a>
