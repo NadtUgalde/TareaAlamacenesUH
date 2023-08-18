@@ -37,7 +37,7 @@
     <form id="form1" runat="server">
         <div>
             <ul>
-                <li><a href="#home">Inicio</a></li>
+                <li><a href="Menu.aspx">Inicio</a></li>
                 <li><a href="#news">Facturación</a></li>
                 <li><a href="#news">Bitacora</a></li>
                 <li class="dropdown">

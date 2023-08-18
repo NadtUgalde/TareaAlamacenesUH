@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AlamacenesUH
+namespace AlmacenesUH
 {
 
 

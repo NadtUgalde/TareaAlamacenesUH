@@ -84,7 +84,7 @@
     <Content Include="Imagenes\favicon.ico" />
     <Content Include="Imagenes\FondoMenu.jpg" />
     <Content Include="Imagenes\UH.jpg" />
-    <Content Include="LoginU.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Web.config" />
     <Content Include="FrmClientes.aspx" />
@@ -124,12 +124,12 @@
       <DependentUpon>FrmProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\ClsUsuario.cs" />
-    <Compile Include="LoginU.aspx.cs">
-      <DependentUpon>LoginU.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginU.aspx.designer.cs">
-      <DependentUpon>LoginU.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
