@@ -5,7 +5,7 @@
     <div>
             <div>
                 <label for="Producto">Producto:</label>
-                <asp:TextBox ID="tproducto" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tproducto" runat="server" OnTextChanged="tproducto_TextChanged"></asp:TextBox>
             </div>
             <div>
                 <label for="Nombre">Nombre:</label>

@@ -102,15 +102,18 @@ namespace AlamacenesUH
             String telefono = ttelefono.Text;
             int resultado = ClsCliente.ModificarClientes(codigo, nombre, direccion, telefono);
 
-            if (resultado > 0)
+            if (IsValid)
             {
-                alertas("Usuario ha sido modificado con exito");
-                LimpiarCampos();
-                CargarClientes();
-            }
-            else
-            {
-                alertas("Error al ingresar Usuario");
+                if (resultado > 0)
+                {
+                    alertas("Usuario ha sido modificado con exito");
+                    LimpiarCampos();
+                    CargarClientes();
+                }
+                else
+                {
+                    alertas("Error al ingresar Usuario");
+                }
             }
         }
         protected void tnombre_TextChanged(object sender, EventArgs e)

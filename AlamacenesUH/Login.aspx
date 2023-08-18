@@ -16,9 +16,11 @@
         <form id="form1" runat="server">
             <!-- USUARIO INPUT -->
             <label for="username">USUARIO</label>
-            <asp:TextBox ID="tusuario" class="login-box" placeholder="Ingrese su nombre de usuario" runat="server" CssClass="auto-style1" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
+            <asp:TextBox ID="tusuario" class="login-box" placeholder="Ingrese su nombre de usuario" runat="server" CssClass="auto-style1" OnTextChanged="tusuario_TextChanged" />
             <!-- CONTRASEÑA INPUT -->
             <label for="password">CONTRASEÑA</label>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tclave" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
             <asp:TextBox ID="tclave" class="login-box" TextMode="Password" placeholder="Ingrese su contraseña" runat="server" CssClass="auto-style1" />
             <asp:Button ID="bingresar" Class="login-box" runat="server" Text="Iniciar sesion" CssClass="auto-style1" OnClick="bingresar_Click" BorderStyle="None" ToolTip="Cargando..." />
             <a href="#">¿No te acuerdas de tu contraseña?</a><br />

@@ -28,14 +28,25 @@ namespace AlmacenesUH
         }
         protected void bingresar_Click(object sender, EventArgs e) //metodo para el boton de iniciar sesion
         {
-            if (ClsUsuario.ConsultarUsuario(tusuario.Text, tclave.Text) > 0) //Si el valor que retorna la clase usuario es 1 entonces redirige a la ventana que se selecciono.
+            if (IsValid)
             {
-                Response.Redirect("Menu.aspx");
+
+                if (ClsUsuario.ConsultarUsuario(tusuario.Text, tclave.Text) > 0) //Si el valor que retorna la clase usuario es 1 entonces redirige a la ventana que se selecciono.
+                {
+
+                    Response.Redirect("Menu.aspx");
+
+                }
+                else
+                {
+                    alertas("USUARIO NO EXISTE :)"); //Mensaje de alerta.
+                }
             }
-            else
-            {
-                alertas("USUARIO NO EXISTE :)"); //Mensaje de alerta.
-            }
+        }
+
+        protected void tusuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

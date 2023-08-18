@@ -112,5 +112,10 @@ namespace AlamacenesUH
                 alertas("Error al ingresar producto");
             }
         }
+
+        protected void tproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
