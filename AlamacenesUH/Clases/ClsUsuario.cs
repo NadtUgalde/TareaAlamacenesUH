@@ -31,19 +31,19 @@ namespace AlmacenesUH.Clases
 			{
 				using (Conn = DBconn.obtenerConexion())
 				{
-                    SqlCommand cmd = new SqlCommand("ValidarUsuario", Conn)
+                    SqlCommand cmd = new SqlCommand("DesEncriptarClave", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-                    cmd.Parameters.Add(new SqlParameter("@usuario", usuario));
-                    cmd.Parameters.Add(new SqlParameter("@clave", clave));
+                    cmd.Parameters.Add(new SqlParameter("@Correo", usuario));
+                    cmd.Parameters.Add(new SqlParameter("@Clave", clave));
 
                     retorno = cmd.ExecuteNonQuery();
 					using (SqlDataReader reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())
 						{
-							retorno = 1;
+							retorno = reader.GetInt32(0);
 						}
 					}
                 }
