@@ -9,10 +9,10 @@
             <asp:TextBox ID="tcodigo" runat="server"></asp:TextBox>
         </div>
         <div>
-            <label for="Nombre">Nombre Cliente:</label>
-            <asp:TextBox ID="tnombre" runat="server" OnTextChanged="tnombre_TextChanged"></asp:TextBox>
+            <label for="Nombre">Nombre Cliente:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tnombre" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
+            </label>
+            &nbsp;<asp:TextBox ID="tnombre" runat="server" OnTextChanged="tnombre_TextChanged"></asp:TextBox>
         </div>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tnombre" ErrorMessage="RequiredFieldValidator" ForeColor="#CC0000">Campo requerido</asp:RequiredFieldValidator>
         <div>
             <label for="Direccion">Direccion:</label>
             <asp:TextBox ID="tdireccion" runat="server"></asp:TextBox>

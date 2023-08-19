@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base de batos\SQLQuery1.sql" />
     <Content Include="Css\CssBotones.css" />
     <Content Include="Css\EstiloCatalogo.css" />
     <Content Include="Css\Info.css" />
